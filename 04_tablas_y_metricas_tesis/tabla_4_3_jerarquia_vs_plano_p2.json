@@ -1,0 +1,131 @@
+{
+  "configuracion_base_evaluada": "int8_dim512_M12",
+  "presupuesto_estructural_corpus_completo_1_99M": {
+    "nodos_totales": 1990000,
+    "conectividad_M": 12,
+    "factor_multicapa_m_L": 0.4024,
+    "nivel_maximo_L_max": 6,
+    "distribucion_nodos_por_capa": {
+      "capa_L0": 1990000,
+      "capa_L1": 165228,
+      "capa_L2": 13758,
+      "capa_L3": 1157,
+      "capa_L4": 92,
+      "capa_L5": 6,
+      "capa_L6": 1
+    },
+    "nodos_presentes_en_L1_o_superior": 165228,
+    "porcentaje_nodos_en_capas_superiores": 8.3,
+    "memoria_vectores_int8_mb": 971.68,
+    "memoria_grafo_capa_base_L0_mb": 189.78,
+    "memoria_sobrecarga_jerarquia_mb": 33.09,
+    "memoria_total_hnsw_jerarquico_mb": 1194.55,
+    "memoria_total_grafo_plano_nsw_mb": 1161.46,
+    "ahorro_memoria_sobre_grafo_porcentaje": 14.85,
+    "ahorro_memoria_total_indice_porcentaje": 2.77
+  },
+  "presupuesto_estructural_subconjunto_1M": {
+    "nodos_totales": 1000000,
+    "conectividad_M": 12,
+    "factor_multicapa_m_L": 0.4024,
+    "nivel_maximo_L_max": 6,
+    "distribucion_nodos_por_capa": {
+      "capa_L0": 1000000,
+      "capa_L1": 83142,
+      "capa_L2": 7017,
+      "capa_L3": 588,
+      "capa_L4": 47,
+      "capa_L5": 4,
+      "capa_L6": 1
+    },
+    "nodos_presentes_en_L1_o_superior": 83142,
+    "porcentaje_nodos_en_capas_superiores": 8.31,
+    "memoria_vectores_int8_mb": 488.28,
+    "memoria_grafo_capa_base_L0_mb": 95.37,
+    "memoria_sobrecarga_jerarquia_mb": 16.64,
+    "memoria_total_hnsw_jerarquico_mb": 600.29,
+    "memoria_total_grafo_plano_nsw_mb": 583.65,
+    "ahorro_memoria_sobre_grafo_porcentaje": 14.86,
+    "ahorro_memoria_total_indice_porcentaje": 2.77
+  },
+  "analisis_autopista_hubs_L0": {
+    "nodos_activos_visitados_en_L0": 159054,
+    "total_accesos_haz_registrados": 200000,
+    "trafico_concentrado_en_top_1_pct_hubs": 4.45,
+    "trafico_concentrado_en_top_5_pct_hubs": 13.74,
+    "trafico_concentrado_en_top_10_pct_hubs": 21.69,
+    "maximo_visitas_un_solo_nodo_hub": 39
+  },
+  "comparacion_jerarquia_vs_plano_por_ef": {
+    "ef_32": {
+      "ef_search": 32,
+      "recall_at_10_hnsw_jerarquico": 0.7081,
+      "recall_at_10_grafo_plano_nsw": 0.7081,
+      "ndcg_at_10_unspsc": 0.6354,
+      "precision_at_10_clase_unspsc": 0.5743,
+      "evaluaciones_distancia_capas_superiores": 46.8,
+      "evaluaciones_distancia_capa_base_L0": 232.0,
+      "fraccion_computo_en_capas_superiores_pct": 16.79,
+      "latencia_p50_hnsw_ms": 0.0279,
+      "latencia_p50_plano_ms": 0.0278,
+      "qps_hnsw_media": 33085.2807,
+      "qps_plano_media": 35958.5429
+    },
+    "ef_64": {
+      "ef_search": 64,
+      "recall_at_10_hnsw_jerarquico": 0.7675,
+      "recall_at_10_grafo_plano_nsw": 0.7675,
+      "ndcg_at_10_unspsc": 0.6521,
+      "precision_at_10_clase_unspsc": 0.5931,
+      "evaluaciones_distancia_capas_superiores": 46.8,
+      "evaluaciones_distancia_capa_base_L0": 556.8,
+      "fraccion_computo_en_capas_superiores_pct": 7.75,
+      "latencia_p50_hnsw_ms": 0.0464,
+      "latencia_p50_plano_ms": 0.0469,
+      "qps_hnsw_media": 21290.2799,
+      "qps_plano_media": 21194.1135
+    },
+    "ef_128": {
+      "ef_search": 128,
+      "recall_at_10_hnsw_jerarquico": 0.8009,
+      "recall_at_10_grafo_plano_nsw": 0.8009,
+      "ndcg_at_10_unspsc": 0.6612,
+      "precision_at_10_clase_unspsc": 0.6029,
+      "evaluaciones_distancia_capas_superiores": 46.8,
+      "evaluaciones_distancia_capa_base_L0": 1299.2,
+      "fraccion_computo_en_capas_superiores_pct": 3.48,
+      "latencia_p50_hnsw_ms": 0.0822,
+      "latencia_p50_plano_ms": 0.0816,
+      "qps_hnsw_media": 12157.7084,
+      "qps_plano_media": 12289.0302
+    },
+    "ef_256": {
+      "ef_search": 256,
+      "recall_at_10_hnsw_jerarquico": 0.8258,
+      "recall_at_10_grafo_plano_nsw": 0.8258,
+      "ndcg_at_10_unspsc": 0.6684,
+      "precision_at_10_clase_unspsc": 0.6115,
+      "evaluaciones_distancia_capas_superiores": 46.8,
+      "evaluaciones_distancia_capa_base_L0": 2969.6,
+      "fraccion_computo_en_capas_superiores_pct": 1.55,
+      "latencia_p50_hnsw_ms": 0.148,
+      "latencia_p50_plano_ms": 0.1481,
+      "qps_hnsw_media": 6700.1615,
+      "qps_plano_media": 6705.7502
+    },
+    "ef_512": {
+      "ef_search": 512,
+      "recall_at_10_hnsw_jerarquico": 0.8384,
+      "recall_at_10_grafo_plano_nsw": 0.8384,
+      "ndcg_at_10_unspsc": 0.672,
+      "precision_at_10_clase_unspsc": 0.6163,
+      "evaluaciones_distancia_capas_superiores": 46.8,
+      "evaluaciones_distancia_capa_base_L0": 6681.6,
+      "fraccion_computo_en_capas_superiores_pct": 0.7,
+      "latencia_p50_hnsw_ms": 0.2877,
+      "latencia_p50_plano_ms": 0.2867,
+      "qps_hnsw_media": 3472.8511,
+      "qps_plano_media": 3481.6694
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "configuracion_empaquetada": "secop_int8_dim512_M12.usearch (view=True)",
+  "documentos_totales_disponibles": 1990000,
+  "presupuesto_memoria_8gb": {
+    "tamano_indice_disco_mb": 1193.23,
+    "rss_proceso_listo_mb": 1534.84,
+    "rss_pico_con_capa_rag_mb": 2981.25,
+    "margen_libre_en_8gb_mb": 5210.75
+  },
+  "validacion_2000_consultas_parafraseadas": {
+    "consultas_evaluadas": 2000,
+    "similitud_coseno_media_parafraseo": 0.9704,
+    "ndcg_at_10_parafraseadas": 0.6925,
+    "precision_at_10_segmento_parafraseadas": 0.7775,
+    "precision_at_10_clase_parafraseadas": 0.6376
+  },
+  "validacion_300_consultas_acuerdo_relevancia": {
+    "consultas_juzgadas": 300,
+    "relevancia_media_busqueda_exacta": 0.6997,
+    "relevancia_media_indice_compacto_8gb": 0.69,
+    "diferencia_absoluta_puntos": 0.0097,
+    "tasa_acuerdo_con_referencia_pct": 99.03
+  },
+  "casos_estudio_prototipo_rag": [
+    {
+      "caso_estudio": "Caso 1 (Veeduría de Infraestructura y Mantenimiento Vial)",
+      "consulta_lenguaje_natural": "MEJORAMIENTO DE LA VIAS SECUNDARIAS DEL DEPARTAMENTO DE GRUPO 1: MEJORAMIENTO DE LA VÍA FÓMEQUE - UBAQUE; DEPARTAMENTO DE CUNDINAMARCA",
+      "filtros_aplicados": {
+        "departamento": null,
+        "segmentos_unspsc_objetivo": [
+          "72",
+          "30",
+          "95"
+        ],
+        "excluir_prestacion_servicios_y_seg80": true
+      },
+      "contratos_recuperados": 10,
+      "latencia_busqueda_vectorial_ms": 792.229,
+      "latencia_agregacion_rag_ms": 195.251,
+      "latencia_total_end_to_end_ms": 987.48,
+      "capa_rag_rango_precios_cop": {
+        "minimo_cop": 100000000.0,
+        "mediana_cop": 2339386577.2,
+        "media_cop": 3034272171.34,
+        "maximo_cop": 7935601043.0
+      },
+      "capa_rag_entidades_frecuentes": [
+        {
+          "entidad": "INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA - ICCU",
+          "contratos_en_top_k": 10
+        }
+      ],
+      "capa_rag_modalidades_usadas": [
+        {
+          "modalidad": "LICITACIÓN PÚBLICA OBRA PUBLICA",
+          "contratos_en_top_k": 5
+        },
+        {
+          "modalidad": "CONTRATACIÓN DIRECTA",
+          "contratos_en_top_k": 4
+        },
+        {
+          "modalidad": "CONCURSO DE MÉRITOS ABIERTO",
+          "contratos_en_top_k": 1
+        }
+      ],
+      "muestra_primer_contrato_recuperado": {
+        "numero_proceso": "CO1.BDOS.913554",
+        "entidad": "INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA - ICCU",
+        "valor_cop": 3674176968.0,
+        "descripcion": "MEJORAMIENTO DE LA VÍAS SECUNDARIAS DEL DEPARTAMENTO DE GRUPO 2: MEJORAMIENTO DE LA VÍA CÁQUEZA - FOSCA; DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      "resumen_ejecutivo_generado": "Síntesis RAG (10 contratos análogos recuperados para 'MEJORAMIENTO DE LA VIAS SECUNDARIAS DEL DEPARTAMENTO DE GRUPO 1: MEJORAMIENTO DE LA VÍA FÓMEQUE...'): El valor contractual oscila entre $100,000,000 COP y $7,935,601,043 COP, con una mediana de $2,339,386,577 COP (media: $3,034,272,171 COP). Las modalidades predominantes son LICITACIÓN PÚBLICA OBRA PUBLICA (5), CONTRATACIÓN DIRECTA (4), CONCURSO DE MÉRITOS ABIERTO (1), destacando como principales entidades contratantes INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA - ICCU (10) bajo las clases UNSPSC 721410, 951116."
+    },
+    {
+      "caso_estudio": "Caso 2 (Estudio de Mercado de Suministro de Dotación y Materiales)",
+      "consulta_lenguaje_natural": "SUMINISTRO DE ELEMENTOS DE PAPELERIA; ÚTILES DE OFICINA Y/O INSUMOS DE IMPRESIÓN PARA EL DEPARTAMENTO DE POLICÍA CESAR Y EL COLEGIO NUESTRA SEÑORA DE FATIMA; VIGENCIA 2022",
+      "filtros_aplicados": {
+        "departamento": null,
+        "segmentos_unspsc_objetivo": [
+          "44",
+          "53",
+          "60",
+          "56"
+        ],
+        "excluir_prestacion_servicios_y_seg80": true
+      },
+      "contratos_recuperados": 10,
+      "latencia_busqueda_vectorial_ms": 1311.935,
+      "latencia_agregacion_rag_ms": 83.301,
+      "latencia_total_end_to_end_ms": 1395.236,
+      "capa_rag_rango_precios_cop": {
+        "minimo_cop": 2208798.0,
+        "mediana_cop": 42673536.47,
+        "media_cop": 65139148.37,
+        "maximo_cop": 287798832.17
+      },
+      "capa_rag_entidades_frecuentes": [
+        {
+          "entidad": "DEPARTAMENTO DE POLICIA CESAR",
+          "contratos_en_top_k": 4
+        },
+        {
+          "entidad": "DEPARTAMENTO DE POLICIA CESAR - AREA DE SANIDAD",
+          "contratos_en_top_k": 2
+        },
+        {
+          "entidad": "MESAN",
+          "contratos_en_top_k": 1
+        }
+      ],
+      "capa_rag_modalidades_usadas": [
+        {
+          "modalidad": "MÍNIMA CUANTÍA",
+          "contratos_en_top_k": 8
+        },
+        {
+          "modalidad": "CONTRATACIÓN RÉGIMEN ESPECIAL (CON OFERTAS)",
+          "contratos_en_top_k": 1
+        },
+        {
+          "modalidad": "SELECCIÓN ABREVIADA SUBASTA INVERSA",
+          "contratos_en_top_k": 1
+        }
+      ],
+      "muestra_primer_contrato_recuperado": {
+        "numero_proceso": "CO1.BDOS.2192435",
+        "entidad": "DEPARTAMENTO DE POLICIA CESAR",
+        "valor_cop": 55299950.0,
+        "descripcion": "SUMINISTRO DE ELEMENTOS DE PAPELERIA; ÚTILES DE OFICINA Y/O INSUMOS DE IMPRESIÓN PARA EL DEPARTAMENTO DE POLICÍA CESAR; PARA LA VIGENCIA 2021 Y VIGENCIA FUTURA 2022"
+      },
+      "resumen_ejecutivo_generado": "Síntesis RAG (10 contratos análogos recuperados para 'SUMINISTRO DE ELEMENTOS DE PAPELERIA; ÚTILES DE OFICINA Y/O INSUMOS DE IMPRESIÓN PARA EL DEPART...'): El valor contractual oscila entre $2,208,798 COP y $287,798,832 COP, con una mediana de $42,673,536 COP (media: $65,139,148 COP). Las modalidades predominantes son MÍNIMA CUANTÍA (8), CONTRATACIÓN RÉGIMEN ESPECIAL (CON OFERTAS) (1), SELECCIÓN ABREVIADA SUBASTA INVERSA (1), destacando como principales entidades contratantes DEPARTAMENTO DE POLICIA CESAR (4), DEPARTAMENTO DE POLICIA CESAR - AREA DE SANIDAD (2), MESAN (1) bajo las clases UNSPSC 441217, 441220."
+    }
+  ]
+}
