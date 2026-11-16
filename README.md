@@ -9,7 +9,7 @@ Repositorio oficial de reproducibilidad científica de la Tesis de Maestría:
 
 Debido a las restricciones de tamaño de archivos binarios en GitHub (`>100 MB`), este repositorio versiona el **100 % del código fuente, configuraciones declarativas (`YAML`), suite de pruebas (`pytest`), métricas (`JSON`) y figuras vectoriales**, mientras que los artefactos masivos del benchmark `SECOP-Vec v1` y el índice preconstruido `.usearch` residen de forma persistente en **Google Drive** bajo una arquitectura Medallón:
 
-* **Enlace público al Lago de Datos (Solo Lectura para Evaluadores):** `https://drive.google.com/drive/folders/REEMPLAZAR_CON_TU_ID_DE_CARPETA`
+* **Enlace público al Lago de Datos (Solo Lectura para Evaluadores):** [archivos Google Drive](https://drive.google.com/drive/folders/1ywM6KPOM25WzngQBB7C-OWD5FpUNZbGX?usp=sharing)
 
 | Capa en Google Drive (`Mi unidad/SECOP_Vec_Tesis/`) | Artefactos Almacenados | Volumen | Etapa / Uso Reproducible |
 | :--- | :--- | :---: | :--- |
@@ -32,6 +32,9 @@ Debido a las restricciones de tamaño de archivos binarios en GitHub (`>100 MB`)
     ├── entornos/
     │   ├── requirements_colab_gpu.txt            # Entorno A: Fábrica de datos y GPU (Colab Pro)
     │   └── requirements_mac_m1_8gb.txt           # Entorno B: Laboratorio local de 8 GB RAM
+    ├── notebooks_colab/
+    │   ├── corpus_secop.ipynb.                   # Cuaderno 1: Primer Módulo Google Colab
+    │   └── generador_vectores_y_verdad.ipynb     # Cuaderno 2: Segundo Módulo Google Colab
     ├── tests/
     │   └── test_integridad_cientifica.py         # Suite pytest (invariantes matemáticos y datos)
     ├── 01_fabrica_corpus_secop.py                # Etapa 1: Ingesta Socrata y deduplicación
