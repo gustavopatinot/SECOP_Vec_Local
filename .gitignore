@@ -1,0 +1,10 @@
+03_oro_benchmark_secop_vec/*.parquet
+03_oro_benchmark_secop_vec/*.mmap
+03_oro_benchmark_secop_vec/*.npy
+05_indices_temporales_ssd/*.usearch
+05_indices_temporales_ssd/*.mmap
+__pycache__/
+.pytest_cache/
+*.tmp
+.DS_Store
+.venv/

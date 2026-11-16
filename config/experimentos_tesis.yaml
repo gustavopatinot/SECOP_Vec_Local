@@ -1,0 +1,75 @@
+# ==============================================================================
+# CONFIGURACIÓN DECLARATIVA REPRODUCIBLE — BENCHMARK SECOP-VEC (TESIS MAESTRÍA)
+# ==============================================================================
+
+metadatos_investigacion:
+  titulo: "Búsqueda semántica a gran escala con memoria restringida: caso SECOP II"
+  semilla_determinista: 42
+  repeticiones_estadisticas: 5
+  nivel_confianza_t_student: 0.95
+  valor_critico_t_gl4: 2.776
+
+restricciones_hardware_objetivo:
+  ram_total_mb: 8192
+  ram_maxima_permitida_proceso_mb: 4500
+  hilos_cpu_maximos: 4
+  tamano_lote_construccion_memmap: 50000
+
+etapa_1_curaduria_corpus:
+  recurso_socrata_id: "jbjy-vk9h"
+  anio_inicio: 2019
+  anio_fin: 2025
+  longitud_minima_caracteres: 30
+  tamano_corpus_objetivo: 1990000
+  tamano_consultas_verdad_referencia: 10000
+
+etapa_2_vectorizacion_gpu:
+  modelo_embeddings: "intfloat/multilingual-e5-base"
+  dimension_base: 768
+  longitud_maxima_tokens: 160
+  prefijo_consulta: "query: "
+  prefijo_documento: "passage: "
+  top_k_verdad_exacta: 100
+
+etapa_3_frontera_pareto_p1_p3:
+  familias_representacion:
+    - "float32_submuestra"
+    - "float16"
+    - "int8"
+    - "b1_rerank_ssd"
+    - "rabitq_4bit"
+  dimensiones_matryoshka: [768, 512, 384, 256]
+  conectividades_M: [8, 12, 16]
+  barrido_ef_search: [32, 64, 128, 256, 512]
+  factor_sobremuestreo_rerank_ssd: 10
+
+etapa_4_jerarquia_vs_plano_p2:
+  configuracion_ganadora: "int8_dim512_M12"
+  dimension: 512
+  conectividad_M: 12
+  factor_multicapa_m_L: 0.4024
+  tamano_corpus_diseccion: 1000000
+  consultas_auditoria_hubs: 2000
+
+etapa_5_busqueda_filtrada_p4:
+  conectividades_evaluadas: [8, 12, 16]
+  ef_search_base: 128
+  estrategias_filtrado:
+    - "post_filtrado"
+    - "hnsw_filtrable"
+    - "acorn_1"
+  predicados_filtro:
+    - "sin_filtro"
+    - "rango_valor"
+    - "otras_modalidades_no_ps"
+    - "departamento"
+    - "departamento_mas_anio"
+
+etapa_6_prototipo_rag:
+  archivo_indice_produccion: "secop_int8_dim512_M12.usearch"
+  modo_apertura_memoria: "view=True"
+  consultas_parafraseadas: 2000
+  consultas_control_humano: 300
+  regla_exclusion_prestacion_servicios:
+    excluir_flag_modalidad: true
+    excluir_segmento_unspsc: "80"
