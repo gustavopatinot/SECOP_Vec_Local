@@ -7,7 +7,7 @@ Repositorio oficial de reproducibilidad científica de la Tesis de Maestría:
 
 1. **Entorno A — Fábrica de Datos y Verdad de Referencia (Google Colab Pro GPU):**
    - Manifiesto: `entornos/requirements_colab_gpu.txt`
-   - Módulos: `01_fabrica_corpus_secop.py` y `02_generador_vectores_y_verdad.py`
+   - Módulos: `notebooks_colab/01_fabrica_corpus_secop.py` y `notebooks_colab/02_generador_vectores_y_verdad.py`
    - Productos: Corpus limpio `SECOP-Vec v1` (N = 1.990.000 contratos únicos curados desde 5.714.490 registros brutos), |Q| = 10.000 consultas estratificadas y verdad de referencia exacta top-100 en GPU.
 
 2. **Entorno B — Laboratorio de Memoria Restringida (MacBook Air M1, 8 GB RAM):**
