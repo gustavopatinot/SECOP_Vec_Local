@@ -1,4 +1,11 @@
-# SECOP-Vec: Búsqueda Semántica a Gran Escala con Memoria Restringida (8 GB RAM)
+<p align="center">
+<img src="https://github.com/gustavopatinot/SECOP_Vec_Local/blob/main/img-readme/SECOP%20Vec%20Logo.png" width="400">
+</p>
+
+
+
+
+# Búsqueda Semántica a Gran Escala con Memoria Restringida 8GB RAM
 
 Repositorio oficial de reproducibilidad científica de la Tesis de Maestría:
 **«Búsqueda semántica a gran escala con memoria restringida: HNSW cuantizado aplicado a la contratación pública colombiana (SECOP II) en un computador de 8 GB de RAM»**.
