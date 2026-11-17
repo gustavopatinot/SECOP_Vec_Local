@@ -8,3 +8,9 @@ __pycache__/
 *.tmp
 .DS_Store
 .venv/
+
+# Exclusión de documentos editoriales y generadores de manuscritos (.docx / .tex)
+*.docx
+10_ensamblador_tesis_ust.py
+11_generador_articulo_congreso_ieee.py
+articulo_congreso_ieee/
