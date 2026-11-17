@@ -40,3 +40,6 @@ figuras:
 
 auditar-todo: figuras test
 	@echo "=== AUDITORÍA DE REPRODUCIBILIDAD COMPLETADA CON ÉXITO ==="
+
+web-rag:
+	.venv/bin/python 12_interfaz_web_rag_secop.py
